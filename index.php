@@ -7,8 +7,8 @@ $amt = $amounts*100;
 
 $data = array( "amount"=> $amt, "currency"=> "INR", "receipt"=> $rcpt); 
 $data_string = json_encode($data);
-$api_key = "rzp_test_mDSwnekBBSpC7F";
-$password = "djTVxJ9hxMpspmmE1D9xUeL5";
+$api_key = "rzp_test_******";  // your api keys
+$password = "***";            // your secret keys
 $ch = curl_init(); 
 curl_setopt($ch, CURLOPT_URL, "https://api.razorpay.com/v1/orders");
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20); 
@@ -33,8 +33,7 @@ $resp = json_decode($result, true);
        
     }
         ?>
-
-<!------Order creation---------------------------->
+<!---- Order Creation-------->
   <!DOCTYPE html>
 <html>
 <head>
@@ -72,9 +71,9 @@ $resp = json_decode($result, true);
 
 </body>
 </html>
-<!--------------Order creation End------------------->
-<!-------------- Checkout Started------------------------->
 
+
+<!----Checkout page------>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,7 +87,7 @@ $resp = json_decode($result, true);
 <form action="charge.php" method="POST">
 <script
 		    src="https://checkout.razorpay.com/v1/checkout.js"
-		    data-key="rzp_test_mDSwnekBBSpC7F"   
+		    data-key="rzp_test_*****"   
 		    data-amount="100" 
 		    data-currency="INR"
 		    data-order_id = "<?php echo $data;?>"
@@ -107,4 +106,4 @@ $resp = json_decode($result, true);
 </form>
 </body>
 </html>
-<!-------------- Checkout End------------------------->
+
