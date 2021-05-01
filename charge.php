@@ -19,7 +19,7 @@ if($responseData['razorpay_payment_id'] == 	null){
     $razorpay_signature = $responseData['razorpay_signature'];
 	$order_id  = $responseData['razorpay_order_id'];
 	$razorpay_payment_id = $responseData['razorpay_payment_id'];
-	$secret = "djTVxJ9hxMpspmmE1D9xUeL5";  // merchant secret key
+	$secret = "********";  // merchant secret key
 	$generated_signature = hash_hmac("sha256",$order_id."|".$razorpay_payment_id, $secret);  
 
   if ($generated_signature == $razorpay_signature) {
