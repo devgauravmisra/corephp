@@ -30,8 +30,8 @@ $rcpt = $_POST['rcpt'];
 
 $frmData  = array('amount' =>$amounts , 'receipt'=>$rcpt, 'currency'=>'INR');
 $data = json_encode($frmData);
-$api_key = "rzp_test_mDSwnekBBSpC7F";
-$password = "djTVxJ9hxMpspmmE1D9xUeL5";
+$api_key = "rzp_test_***";
+$password = "***";
 $ch = curl_init(); 
 curl_setopt($ch, CURLOPT_URL, "https://api.razorpay.com/v1/orders");
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20); 
